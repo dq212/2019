@@ -1,318 +1,273 @@
-<!doctype html>
-
-
+<!DOCTYPE html>
 <html>
-<!-- <?php
-	if ($_POST["submit"]) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$message = $_POST['message'];
-		$human = intval($_POST['human']);
-		$from = 'DQ\'s Contact Form'; 
-		$to = 'dq@dq212.com'; 
-		$subject = 'Message from DQ\'s Contact';
-		
-		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
-		// Check if name has been entered
-		if (!$_POST['name']) {
-			$errName = 'Please enter your name';
-		}
-		
-		// Check if email has been entered and is valid
-		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Please enter a valid email address';
-		}
-		
-		//Check if message has been entered
-		if (!$_POST['message']) {
-			$errMessage = 'Please enter your message';
-		}
-		//Check if simple anti-bot test is correct
-		if ($human !== 5) {
-			$errHuman = 'Your anti-spam is incorrect';
-		}
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! We will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-	}
-}
-	}
-?> -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Daniel Quintero</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 
 
-<head>
-<!--<link rel="shortcut icon" href="imgs/logos/favicon.ico" type="image/x-icon" />-->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/styles.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Leave those next 4 lines if you care about users using IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-<meta name="viewport" content="width=device-width, initial-scale = 1, maximum-scale=1.0, user-scalable=no">
-	
+  <div class="container-fluid">
 
-	<title>DQ212 - Web/Mobile Dev</title>
-</head>
-	<body id="projects">
-	<!--data-spy="scroll" data-target=".navbar-fixed-top" data-offset="200"-->
-		<header>
+    <div class="row text-center row-header">
+      <div class="col-xs-12">
+        <div class="header-col">
+          <img src="img/profiler2.png" alt="profile pic" class="img-responsive profile-pic center-block">
+          <h1>Daniel Quintero</h1>
+          <h2>Freelance Technologist</h2>
+          <a href="mailto:dq@dq212.com" class="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>dq@dq212.com</a>
+        </div>
+        
+      </div>
+    </div>
 
-			<nav class="nav navbar-default navbar-fixed-top" role="navigation">
+    <!-- Bio -->
+  <section style="margin-top:0">
 
-			<div class="content container">
-				
-				
-				<div class="navbar-header">
-			
-						
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-					<a class="navbar-brand" href="#home"><h1>Daniel Quintero <span class="subhead">Web/Mobile Development and Design</span></h1></a>
-				</div><!-- navbar header-->
+      <div class="row">
+        <div class="col xs-12">
+          <h1 class="text-center section-heading">Bio</h1>
+        </div>
+      </div>
+      <div class="col xs-12">
+        <p>
+            <p>Born in NY, teenaged in CA. Studied Film and Art at Syracuse University. 
 
-					<div class="collapse navbar-collapse" id="collapse">
+                Worked in film production in NYC on independent films and even a few karaoke videos.
+                Transitioned into digital video and photo editing. 
+                
+                Started working with web video and discovered a passion for designing and developing websites.
+                Made my way into digital marketing and advertising. 
+                
+                Focused on JavaScript, CSS3, and coded animation techniques. Currently interested in Mobile and Web applications and sites. 
+                
+                Always looking for good work with good people who keep trying to make stuff better. 
+                
+                Problem-solving is the real appeal for me, if not on the computer, in my garage restoring vintage motorcycles. 
+                
+                What drives me: working smarter to go farther.</p>
+        </p>
+      </div>
 
-						<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#projects">WORK</a></li>
-							<li><a href="#bio">BIO</a></li>
-							
-							<li><a href="#clientList">CLIENTS</a></li>
-							<!--<li><a href="#download">Download</a></li>-->
-							<li><a href="#resume">RESUME</a></li>
-							<li><a href="#footer">CONTACT</a></li>
-						</ul>
-						<!--social media-->
-
-					</div><!--collapse navbar-collapse-->
-
-				</div><!--nav container-->
-			</nav>
-
-			
-
-			</header><!-- header -->
-
-			<div class="page content container" >
-			<h2>Work</h2>
-				
-			</div><!--content conatiner-->
-	<div class="main">
-	<div class="work">
-			<div id="carousel" class="content container">
-				<div class="carousel slide" data-ride="carousel" id="featured">
-					<div class="carousel-inner">
-						<!-- <div class="item active"><img src="imgs/carousel/bloomingdales_denim.png"></img></div> -->
-						<div class="item active"><img src="imgs/carousel/mp_app.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/vma.png"></img></div>
-						<div class="item"><img src="imgs/carousel/tiaa_banners.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/empire_nyuniongrade.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/bofa_atm.png"></img></div>
-						<div class="item"><img src="imgs/carousel/guardian.png"></img></div>
-						<div class="item"><img src="imgs/carousel/zellis_landing_page.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/bloomingdales_home.png"></img></div>
-						<div class="item"><img src="imgs/carousel/lpl.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/email_collegeBoard.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/email_ubs.jpg"></img></div>
-						<div class="item"><img src="imgs/carousel/nbcu.png"></img></div>
-						<div class="item"><img src="imgs/carousel/mcann-mixed.jpg"></img></div>
-						<!-- <div class="item"><img src="imgs/carousel/map.png"></img></div> -->
-						<div class="item"><img src="imgs/carousel/impact.png"></img></div>
-						<div class="item"><img src="imgs/carousel/red.png"></img></div>
-						<div class="item"><img src="imgs/carousel/outlook.png"></img></div>
-						<!-- <div class="item"><img src="imgs/carousel/green_giant.png"></img></div> -->
-						<div class="item"><img src="imgs/carousel/tahoe_south.png"></img></div>
-						<div class="item"><img src="imgs/carousel/bloomingdales_handbags.png"></img></div>
-						<!-- <div class="item"><img src="imgs/carousel/amazon_visa.png"></img></div> -->
-						<div class="item"><img src="imgs/carousel/serostim.png"></img></div>
-						<div class="item"><img src="imgs/carousel/morgan_stanley.png"></img></div>
-					</div><!--carousel inner-->
-
-					<a class="left carousel-control" href="#featured" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-					<a class="right carousel-control" href="#featured" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</div><!--carousel-->
-			</div><!--carousel container-->
-
-		</div><!--work-->
-	
-			<div class="page " id="bio">
-				<div class="content container">
-						<h2>Bio</h2>
-						<p>Born in NY, teenaged in CA. Studied Film and Art at Syracuse University. 
-
-Worked in film production in NYC on independent films and even a few karaoke videos.
-Transitioned into digital video and photo editing. 
-
-Started working with web video and discovered a passion for designing and developing websites.
-Made my way into digital marketing and advertising. 
-
-Focused on ActionScript, JavaScript, CSS3, and coded animation techniques. Currently interested in Mobile and Web applications and sites. 
-
-Always looking for good work with good people who keep trying to make stuff better. 
-
-Problem-solving is the real appeal for me, if not on the computer, in my garage restoring vintage motorbikes. 
-
-What drives me: working smarter to go farther.</p>
-				</div><!-- content container -->
-			</div><!-- about page -->
-
-
-				 <div class="page " id="clientList">                 
-					 <div class="content container">                         
-						 <h2>Clients</h2>
-							<div class="row">                     
-							
-					<div class="client col-sm-2">
-
-
-							<ul>
-								<li><span class="clientHeading">Financial</span></li>
-								<li>Ally</li>
-								<li>Bank of America</li>
-								<li>Cap Gemini</li>
-								<li>Chase</li>
-								<li>Legg Mason</li>
-								<li>UBS</li>
-							</ul>
-						</div>  
-
-						<div class="client col-sm-2">
-							<ul>
-							<li><span class="clientHeading">CPG &amp; Alcohol</span></li>
-									<li>Green Giant</li>
-									<li>Jos&eacute Cuervo</li>
-									<li>Snuggle</li>
-									<li>Yellow Tail</li>
-									<li>Yoplait</li>
-									<li>Wisk</li>
-							</ul>
-							</div> 
-
-						<div class="client col-sm-2">
-							<ul>
-								<li><span class="clientHeading">Technology &amp; Telcom</span></li>
-								<li>Fuji</li>
-								<li>HP</li>
-								<li>Motorola</li>
-								<li>LG</li>
-								<li>Qwest</li>
-								<li>Verizon Wireless</li>
-								<li>Microsoft Surface</li>
-							</ul>
-						</div>  
-
-						<div class="client col-sm-2">
-							<ul>
-								<li><span class="clientHeading">Pharma &amp; Healthcare</span></li>
-								<li>Pfizer</li>
-								<li>Sanofi</li>
-								<li>Johnson &amp; Johnson</li>
-								<li>Merck</li>
-							</ul>
-						</div>  
-							
-							<div class="client col-sm-2">
-							<ul>
-									<li><span class="clientHeading">Misc</span></li>
-									<li>American Standard</li>
-									<li>Avis</li>
-									<li>Hampton Inn</li>
-									<li>MTV</li>
-									<li>NBC Universal</li>
-									<li>TIAA</li>
-									<li>CTA</li>
-									<li>MetLife</li>
-									<li>USI</li>
-							</ul>
-
-							</div>  
-
-							<div class="client col-sm-2">
-							<ul>
-									<li><span class="clientHeading">Fashion/Retail</span></li>
-									<li>Bloomingdales</li>
-							</ul>
-
-							</div>  
-
-					</div><!--row -->
-					
-				</div><!--content container-->
-				
-			</div><!-- client list page -->
-
-
-<div class="page" id="resume">
-
-	<div class="content container">
-		<div class="row">
-		<div class="centeredBtn">
-							<a class="btn btn-default" href="./dq_resume_2019.pdf" target="_blank"role="button">Download Resume Here</a>
-		</div>
-		</div><!--end row-->
-	</div><!--end content container-->
-
-</div><!-- end resume-->
-
-							<!--<div class="centeredBtn">
-							<a class="btn btn-default" href="#" role="button">Download App</a>
-							</div>-->   
-                  
-			<!--<div class="page " id="download">
-				<div class="content container">
-						<h2>Download the App</h2>
-					
-						<p>Helvetica paleo yr cardigan plaid, try-hard small batch. Occupy you probably haven't heard of them wolf typewriter selvage. Mixtape tofu trust fund 90's, try-hard beard forage keffiyeh chillwave literally kale chips migas narwhal PBR. Whatever photo booth typewriter biodiesel deep v, Marfa fashion axe plaid bicycle rights freegan sartorial drinking vinegar authentic ethical fixie. Twee photo booth McSweeney's Blue Bottle. Vinyl keffiyeh vegan Banksy. Meditation synth migas Austin seitan.</p>
-				</div><-content container
-				
-			</div>--><!-- download page -->
-
-
-
-
-	</div><!-- main class -->
-
-		<footer id="footer">
-			<div class="content container">
-				<div class="row">
-					<div>
-						<span class="footerContact">Contact me at <a href="mailto:dannyq@gmail.com" target="_blank">dannyq@gmail.com</a></span>
-						<span class="copyright">&#169;2019 DQ212. All rights reserved.</span>
-					</div><!--col-sm-6-->	
-				</div>
-				
-				<!--<nav class="navbar navbar-default" role="navigation">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Terms of use</a></li>
-						</li><a href="#">Privacy Policy</a></li>
-					</ul>
-				</nav>-->
-			
-				
-			</div><!--content container-->
-		</footer>
-		
-		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="js/myScript.js"></script>
     
+  
+      </section>
 
-	</body>
 
-	
+  <!-- Projects -->
+  <section style="margin-top:0">
 
+    <div class="row">
+      <div class="col xs-12">
+        <h1 class="text-center section-heading">Work</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-2">
+
+          <div class="col-lg-8 logo-list project">
+             <img src="img/projects/usi-attorneys-preferred.png" alt="" class="img-responsive center-block">
+           </div>
+     
+           <div class="col-lg-4 ">
+             <h3>USI Attorneys Preferred</h3>
+             <p>Site for Attorneys to get information about all the available types of insurance available to them.</p>
+             <p><a href="http://www.usiaffinity.com/attorneyspreferred/">Launch</a></p>
+           </div>
+
+           <hr class="dotted">
+
+        
+        <div class="col-lg-8 logo-list project">
+          <img src="img/projects/metlife-memory-match.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="col-lg-4 ">
+          <h3>MetLife</h3>
+          <p>A simple javaScript card flip memory game to re-inforce the the vaiety of big life events where Met-Life can give you peace of mind.</p>
+          <!-- <p><a href="http://jobb.ie/">Launch</a></p> -->
+        </div>
+
+        <hr class="dotted">
+
+        <div class="col-lg-8 logo-list project">
+            <img src="img/projects/mp_app.jpg" alt="" class="img-responsive center-block">
+          </div>
+   
+          <div class="col-lg-4 ">
+            <h3>MotoPreserve App</h3>
+            <p>The App was created to be a simple, yet robust tool for ALL bike owners.  </p>
+            <p><a href="https://itunes.apple.com/us/app/motopreserve/id1253423212?ls=1&mt=8" target="_blank"><img src="./img/techlogos/app-store-badge.png" alt="" width="100"></a></p>
+          </div>
+     
+
+        <div class="col-xs-12 text-center">
+            <!-- <img src="img/techlogos/h5-badge.png" alt="html5 logo" class="tech-badge">
+            <img src="img/techlogos/css-badge.png" alt="css3 logo" class="tech-badge">
+
+            <img src="img/techlogos/js-badge.png" alt="js logo" class="tech-badge">
+            <img src="img/techlogos/webpack-logo.png" alt="webpack logo" class="techlogo"> -->
+        
+          <!--<img src="img/techlogos/android.png" alt="android logo" class="techlogo">
+          <img src="img/techlogos/androidstudio.png" alt="firebase logo" class="techlogo">
+          <img src="img/techlogos/java.png" alt="android studio logo" class="techlogo">
+          <img src="img/techlogos/firebase.png" alt="java logo" class="techlogo"> -->
+        </div>
+
+      </div>
+
+    </div>
+
+
+    </section>
+
+  <!-- <div class="spacer"></div> -->
+
+  <hr>
+
+  <!-- Technical Experience -->
+  <section>
+    
+    <div class="row">
+      <div class="col xs-12">
+        <h1 class="text-center section-heading">Technologies</h1>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <div class="list-container logo-list">
+<!--             <div class="tech-item">
+              <i class="devicon-heroku-plain-wordmark colored"></i>
+            </div> -->
+            <!-- <span class="tech-item">
+              <i class="devicon-csharp-plain colored"></i>
+              <span class="tech-item-text">
+                C#
+              </span>
+            </span>
+            <span class="tech-item">
+              <i class="devicon-cplusplus-plain colored"></i>
+              <span class="tech-item-text">
+                C++
+              </span>
+            </span>
+            <span class="tech-item">
+              <i class="devicon-java-plain colored"></i>
+              <span class="tech-item-text">
+                Java
+              </span>
+            </span>
+            <span class="tech-item">
+              <i class="devicon-git-plain colored"></i>
+              <span class="tech-item-text">
+                Git
+              </span>
+            </span> -->
+            <img src="img/techlogos/h5-badge.png" alt="html5 logo" class="tech-badge">
+            <img src="img/techlogos/css-badge.png" alt="css3 logo" class="tech-badge">
+
+            <img src="img/techlogos/js-badge.png" alt="js logo" class="tech-badge">
+            <img src="img/techlogos/sass-logo.png" alt="sass logo" class="techlogo">
+
+            <img src="img/techlogos/swift-logo.png" alt="swift logo" class="techlogo">
+            <img src="img/techlogos/react-logo.png" alt="react logo" class="techlogo">
+            <img src="img/techlogos/gulp-logo.png" alt="gulp logo" class="techlogo">
+            <img src="img/techlogos/python-logo.png" alt="python logo" class="techlogo">
+
+
+            <img src="img/techlogos/firebase.png" alt="firebase logo" class="techlogo">
+            <img src="img/techlogos/webpack-logo.png" alt="webpack logo" class="techlogo">
+
+            <br/>
+            <img src="img/techlogos/adobe-cc-logo.png" alt="adobe cc logo" class="techlogo">
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr>
+<!-- 
+  <section>
+    <div class="row">
+      <div class="col xs-12">
+        <h1 class="text-center section-heading">Tools</h1>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <div class="list-container">
+            <span class="tech-tool-item">
+              <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              Android Studio
+            </span>
+            <span class="tech-tool-item">
+              <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              Microsoft Visual Studios
+            </span>
+            <span class="tech-tool-item">
+              <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              IntelliJ IDEA
+            </span>
+            <span class="tech-tool-item">
+              <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              TortoiseGit
+            </span>
+            <span class="tech-tool-item">
+              <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              FireBase
+            </span> 
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+    <div class="row row-footer">
+      <div class="col footer-col text-center">
+        <h3>I'm available for work</h3>
+        <a href="mailto:dq@dq212.com" class="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>dq@dq212.com</a>
+        <div class="btn-centered">
+            <a class="btn btn-default btn-resume" href="./dq_resume_2019.pdf" target="_blank"role="button">Download Resume Here</a>
+</div>
+      </div>
+       
+      
+    </div>
+
+    </div> <!-- end container -->
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
