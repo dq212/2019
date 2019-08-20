@@ -228,13 +228,11 @@ hr {
 	background: #48ab97;
 	border:none;
 	/* border-color: #fff; */
-
 }
 
-
 .btn-resume:hover {
-	color: #48ab97;
-	background: #fff;
+	color: #fff;
+	background: #949897;
 	border:none;
 	/* border-color: #fff; */
 
