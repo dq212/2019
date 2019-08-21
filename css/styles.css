@@ -88,8 +88,8 @@ hr {
   margin:auto;
 }
 
-.header-col h2 {
-	padding: 1em;
+.header-col h2, .header-col h1 {
+	padding: 0 1em;
 }
 
 .profile-pic {
