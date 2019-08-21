@@ -88,6 +88,10 @@ hr {
   margin:auto;
 }
 
+.header-col h2 {
+	padding: 1em;
+}
+
 .profile-pic {
 	border-radius:50%;
 	width:40%;
@@ -136,6 +140,7 @@ hr {
 .techlogo {
 	/* width:100px; */
 	margin:0.5em;
+	width:auto;
 	height:75px;
 }
 
