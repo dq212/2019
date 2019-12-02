@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Google Tag Manager -->					
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':					
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],					
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);					
+  })(window,document,'script','dataLayer','GTM-N5V228');</script>					
+  <!-- End Google Tag Manager -->					
+
+  <title>Affordable Coverage</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+   <!-- Compiled and minified CSS -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"> -->
+   <link rel="stylesheet" href="https://s3.amazonaws.com/daccoverage.com/css/styles.css">
+
+    <link rel="shortcut icon" href="https://www.daccoverage.com/imgs/favicon.png"> 
+  
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
+    <script>
+    function submitToAPI(e) {
+      $('#btn-submit').removeClass('un-sucessful sucessful');
+      // console.log('trying to submit');
+      e.preventDefault();
+      // var URL = "https://0un7f2ome1.execute-api.us-west-2.amazonaws.com/02";
+      var URL = "https://lyzbohwh13.execute-api.us-west-2.amazonaws.com/mailToFormStage/formtomailresource";
+      
+      // console.log($('#c1').prop('checked'));
+         
+         
+           var Namere = /[A-Za-z]{1}[A-Za-z]/;
+           if (!Namere.test($("#name-input").val())) {
+            // $(".popup, .popup-content").addClass("active");
+                // alert ("Name can not less than 2 char");
+                openModal(null, txt = "Name cannot be less than 2 characters.");
+               return;
+           }
+
+           var LastNamere = /[A-Za-z]{1}[A-Za-z]/;
+           if (!LastNamere.test($("#last-name-input").val())) {
+                // alert ("Last Name can not be less than 2 char");
+                openModal(null, txt = "Last Name cannot be less than 2 characters.");
+               return;
+           }
+
+           var mobilere = /((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4})/;
+          
+           if (!mobilere.test($("#phone-input").val())) {
+              openModal(null, txt = "Please enter valid number");
+              //  alert ("Please enter valid number");
+               return;
+           }
+
+           if ($("#email-input").val()=="") {
+               openModal(null, txt = "Please enter your email id");
+               alert ("Please enter your email id");
+               return;
+           }
+
+           var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+           if (!reeamil.test($("#email-input").val())) {
+              //  alert ("Please enter valid email address");
+               openModal(null, txt = "Please enter valid email address");
+               return;
+           }
+
+           var Addressre = /[A-Za-z]{1}[A-Za-z]/;
+           if (!Addressre.test($("#addres-1-input").val())) {
+                openModal(null, txt = "Address cannot be less than 2 characters.");
+                // alert ("Address can not be less than 2 char");
+               return;
+           }
+
+           var Cityre = /[A-Za-z]{1}[A-Za-z]/;
+           if (!Cityre.test($("#city-input").val())) {
+                openModal(null, txt = "City cannot be less than 2 characters.");
+                    // alert ("City can not be less than 2 char");
+               return;
+           }
+
+          //  var Statere = null
+          //  if (!Statere.test($("#state-input").val())) { 
+          //      alert ("Please select a state from the dropdown");
+          //      return;
+          //  }
+
+           var Zipre = /[0-9]{5}/;
+           if (!Zipre.test($("#zip-input").val())) {
+               openModal(null, txt = "Please enter valid zip code 5 digit number");
+              //  alert ("Please enter valid zip code 5 digit number");
+               return;
+           }
+
+           if(!$('#c1').prop('checked')) {
+              openModal(null, txt = "You must agree to the Calling Agreement before submitting.");
+              // alert('You must agree to the terms first.');
+              return;
+            }   
+
+
+          //  if(!$("#c1").val() == checked ){
+          //      alert('You must agree to the terms first.');
+          //      return;
+          //   }
+
+      var name = $("#name-input").val();
+      var lastName = $("#last-name-input").val();
+      var phone = $("#phone-input").val();
+      var email = $("#email-input").val();
+      var address = $("#address-1-input").val();
+      var city = $("#city-input").val();
+      var state = $("#state-select").val();
+      var zip = $("#zip-input").val();
+
+      var data = {
+         name : name,
+         lastName: lastName,
+         phone : phone,
+         email : email,
+         address : address,
+         city : city,
+         state : state,
+         zip : zip
+       };
+
+      $.ajax({
+        type: "POST",
+        url : "https://lyzbohwh13.execute-api.us-west-2.amazonaws.com/mailToFormStage/formtomailresource",
+        dataType: "json",
+        crossDomain: "true",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(data),
+
+        
+    //     success: function () {
+		//    //datalayer for validation on successful
+		//    dataLayer.push({
+		//    'eventLabel' : 'Form Submission_Successful'
+		//    });
+    //       // clear form and show a success message
+    //       //alert("Successfull");
+    //       document.getElementById("contact-form").reset();
+    //       $('#btn-submit').addClass('successful');
+    //       // window.location.href = "./thank_you.html";
+    //       window.open('https://www.daccoverage.com/thank_you.html', '_blank');
+    //       // location.reload();
+    //     },
+    //     error: function () {
+		// //datalayer for validation on error
+		//    dataLayer.push({
+		//    'eventLabel' : 'Form Submission_Unsuccessful'
+		//    });
+    //       $('#btn-submit').addClass('un-successful');
+    //       // show an error message
+    //       // alert("UnSuccessfull");
+    //     }});
+    // }
+
+    success: function () {
+//datalayer for validation on successful
+dataLayer.push({
+'eventLabel' : 'Form Submission_Successful'
+});
+// clear form and show a success message
+//alert("Successfull");
+document.getElementById("contact-form").reset();
+$('#btn-submit').addClass('successful');
+// window.location.href = "./thank_you.html";
+//random function you want to call
+
+//  var win = window.open('./thank_you.html');
+window.open('https://www.daccoverage.com/thank_you.html', '_blank');
+// location.reload();
+},
+error: function () {
+//datalayer for validation on error
+dataLayer.push({
+'eventLabel' : 'Form Submission_Unsuccessful'
+});
+$('#btn-submit').addClass('un-successful');
+// show an error message
+// alert("UnSuccessfull");
+}});
+}
+  </script>
+
+
+
+</head>
+<body>
+    <!-- <button id="modalBtn" class="button">CLICK HERE</button> -->
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+            <span class="closeBtn">&times;</span>
+          <h2>Please complete all required fields</h2>
+        </div>
+          <div class="modal-body">
+            <p id="modalBodyCopy">Some content</p>
+          </div>
+      </div>
+    </div>
+  <!-- Google Tag Manager (noscript) -->					
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5V228"					
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>					
+  <!-- End Google Tag Manager (noscript) -->					
+
+  <header>
+    <div class="header-grid">
+    <div id="logo-main">
+      <div class="logo">
+        <a href="#" class="logo-header-link" target="_blank">
+      <img class="logo-header-img" src="./imgs/logo-DAC.svg" alt="">
+    </a>
+    </div>
+    </div>
+    <div id="phone-holder" >
+      <p>Call to start a conversation today:</p><div class="phone"><a href="tel:1-833-248-9185" class="phone-link" >1-833-248-9185</a> <span class="thin">TTY:711</span></div>
+      <p>8:30am - 6pm</p>
+    </div>
+  </div>
+  </header>
+
+  <div id="showcase">
+    <h1>Welcome to the
+      affordable
+      coverage you
+      deserve.</h1>
+
+    <p>Discover all the ways you can bridge the gap in
+      medical coverage. Now, at a low monthly cost.</p>
+
+      <a id="btn-discover" class="btn btn-yellow" href="#form-holder">Start the conversation</a> 
+  </div>
+ 
+  <div id="main">
+    <h2>Give yourself peace of mind for when the unexpected happens.</h2>
+    <p>Talk to us about four ways to protect you and your family.</p>
+
+  </div>
+
+  <div id="card-holder" class="cards-grid">
+
+    <div id="card-1" class="card card-grid" >
+        <div class="card-content">
+      <div class="icon"><img src="./imgs/icon-accident.svg" alt=""></div>
+      <h4 class="card-title-blue">Critical Illness & Accident</h4>
+      <hr>
+
+      <p>You never know when something unexpected can happen. Protect yourself from the daily costs that can add up if you have a serious illness or injury from an accident.</p>
+    </div>
+      <a id="btn-critical" class="btn btn-card" href="#form-holder">Start the conversation</a> 
+    </div>
+    
+
+    <div id="card-2" class="card card-grid">
+        <div class="card-content">
+      <div class="icon"><img src="./imgs/icon-indemity.svg" alt=""></div>
+      <h4 class="card-title-blue">Fixed Indemnity</h4>
+      <hr>
+
+      <p>Going to the hospital or getting surgery can be expensive. Supplemental fixed indemnity insurance can help you pay those expenses.
+        Plans include a lump sum critical illness
+        benefit for you and your covered spouse,
+        along with a benefit for each covered
+        dependent child.</p>
+    </div>
+        <a id="btn-indemnity" class="btn btn-card" href="#form-holder">Start the conversation</a> 
+    </div>
+   
+
+    <div id="card-3" class="card card-grid">
+        <div class="card-content">
+        <div class="icon"><img src="./imgs/icon-shortTerm-medical.svg" alt=""></div>
+        <h4 class="card-title-blue">Short Term Medical</h4>
+        <hr>
+  
+        <p>Between jobs, a recent graduate, working part-time or retiring early and not yet Medicare eligible? Here’s a great way to get affordable, temporary coverage.</p>
+      </div>
+      <a id="btn-medical" class="btn btn-card" href="#form-holder">Start the conversation</a> 
+    </div>
+    
+
+      <div id="card-4" class="card card-grid">
+        <div class="card-content">
+         <div class="icon"><img src="./imgs/icon-health-wellness.svg" alt=""></div>
+          <h4 class="card-title-blue">Health & Wellness</h4>
+          <hr>
+    
+          <p>Enjoy savings on prescription drugs, the convenience of telemedicine, even savings on specialty health and wellness services like chiropractors, massage therapists and more.</p>
+        </div>
+        <a id="btn-health" class="btn btn-card" href="#form-holder">Start the conversation</a> 
+        </div>
+        
+  </div>
+
+    <div id="form-holder" class="card-content">
+      
+    
+
+      <h2 id="form-heading">Start the conversation now: Find a health plan that's right for you.</h2>
+
+  <form id="contact-form" class="form-grid" method="post">
+    <div id="requiredField">
+    <p class="legal">*Required Field</p></div>
+    <div id="firstName"><h6>First Name*</h6>
+    <input type="text" style="height:35px;" id="name-input" placeholder="Enter first name here…" class="form-control" /></div>
+    <div id="lastName">
+    <h6>Last Name*</h6>
+    <input type="text" style="height:35px;" id="last-name-input" placeholder="Enter last name here…" class="form-control" /></div>
+   <div id="phoneNumber">
+    <h6>Phone</h6>
+    <input type="phone" style="height:35px;" id="phone-input" placeholder="(_) __ - ____" class="form-control"/></div>
+    <div id="emailAddress">
+    <h6>Email*</h6>
+    <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control"/></div>
+    <div id="streetAddress">
+    <h6>Address*</h6>
+    <input type="text" style="height:35px;" id="address-1-input" placeholder="Number, Street name" class="form-control" /></div>
+    <div id="city">
+    <h6>City*</h6>
+    <input type="text" style="height:35px;" id="city-input" placeholder="City" class="form-control" /></div>
+    <div id="state">
+    <h6>State*</h6>
+    <select style="height:35px;" id="state-select" form ="contact-form" class="form-control state-form-control" style="width:50%;">
+      <option value="" disabled selected>Select</option>
+  <option value="AL">AL</option>
+	<option value="AK">AK</option>
+	<option value="AZ">AZ</option>
+	<option value="AR">AR</option>
+	<option value="CA">CA</option>
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DE">DE</option>
+	<option value="DC">DC</option>
+	<option value="FL">FL</option>
+	<option value="GA">GA</option>
+	<option value="HI">HI</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+	<option value="IN">IN</option>
+	<option value="IA">IA</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="ME">ME</option>
+	<option value="MD">MD</option>
+	<option value="MA">MA</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MS">MS</option>
+	<option value="MO">MO</option>
+	<option value="MT">MT</option>
+	<option value="NE">NE</option>
+	<option value="NV">NV</option>
+	<option value="NH">NH</option>
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NY">NY</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VT">VT</option>
+	<option value="VA">VA</option>
+	<option value="WA">WA</option>
+	<option value="WV">WV</option>
+	<option value="WI">WI</option>
+	<option value="WY">WY</option>
+      </select>	
+      </div>
+      <div id="zip">
+    <h6>ZIP code*</h6>
+    <input type="text" style="height:35px;" id="zip-input" placeholder="00000" class="form-control state-form-control" /></div>
+<div id="checkbox-holder">
+    <input type="checkbox" id="c1" name="agreement" required > <span class="agree-terms">Yes, I have read and agree to the <a href="#ca">Calling Agreement</a> below.<br></span>
+  </div>
+    <button id="btn-submit" type="button" class="btn-form-submit "onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+</form>
+            
+</div>
+
+<div id="footer-legal">
+    <p>Product cost and availability varies based on the
+      consumer’s state, age and zip code.</p>
+      <p>These products are not qualifying health coverage
+      (Minimum Essential Coverage) that satisfies the
+      health coverage requirement of the Affordable Care
+      Act. The termination or loss of any of these policies
+      does not entitle the client to a special enrollment
+      period to purchase a health benefit plan that
+      qualifies as minimum essential coverage outside of
+      an open enrollment period. These products may
+      include a pre-existing condition exclusion provision.</p>
+    <p id="ca"><span class="bolded">CALLING AGREEMENT:</span> By clicking the “Yes, I have read and agree" check box above, you consent and
+        request that DAC, its affiliates, and those acting on
+        their behalf, may call or text you using an
+        automated telephone dialing system and/or a
+        prerecorded message. The types of calls or text
+        messages you may receive include advertisements
+        or telemarketing messages concerning our benefits
+        and services. Calls can be made to any number you
+        provide above, even if listed on a national or state
+        Do Not Call registry. You understand that consent is
+        not a condition of purchase and you may also
+        receive a quote by calling us at the number listed on
+        this website.</p>
+</div>
+
+<footer>
+    <div id="logo-footer">
+        <div class="footer-grid">
+        <div id="logo-footer-holder">
+            <div class="logo-footer">
+              <a href="#" class="logo-footer-link" target="_blank">
+            <img class="logo-footer-img" src="./imgs/logo-DAC-white.svg" alt="">
+          </a>
+          </div>
+          </div>
+          <div id="phone-holder-footer" >
+              <p class="small-footer-copy">Call to start a conversation today: </p><span class="phone-footer"><a href="tel:1-833-248-9185" class="phone-link-footer" >1-833-248-9185</a> <span class="thin">TTY:711</span></span>
+              <p>8:30am - 6pm</p>
+            </div>
+      </div>
+     
+      </div>
+</footer>
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+  <script src="./js/main.js"></script>
+
+</body>
+</html> 

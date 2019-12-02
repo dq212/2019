@@ -1,0 +1,599 @@
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+ text-align: center;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+    margin:0 auto;
+    width:100%;
+    max-width: 1440px;
+    background:#ffffff;
+}
+
+
+
+header {
+  width:100%;
+  padding:1rem 0  1rem 0;
+
+}
+
+.wrapper {
+  max-width:1440;
+}
+
+#bg-header {
+  margin:0 auto;
+  background:url('https://s3-us-west-2.amazonaws.com/letsconnectca.com/imgs/bg-header-mobile.png') repeat;
+  background-position: center;
+  background-size:cover;
+  width:100%;
+  z-index: -1;
+}
+
+
+h1, h2, h3 {
+  color:#006FAC;  
+  padding:0;
+  margin:0 1rem;
+}
+
+.h2 {
+  margin:0rem 0 0 0;
+}
+
+p {
+  padding:0.5rem;
+  margin:0;
+}
+
+
+.bg-heaedr-h1 {
+  font-weight: 700;
+  text-align: center;
+  padding:3rem 2rem 1rem 2rem;
+  /* margin:2rem 4rem 0rem 4rem; */
+  font-size:2.4rem;
+}
+
+#bg-header p {
+  padding:0 2rem 2rem 2rem;
+}
+
+#logo {
+  display: block;
+  text-align: center;
+  margin:0 auto;
+  padding-left:0px;
+  padding-bottom:2rem;
+}
+
+.container {
+  width:100%;
+  margin:0 auto;
+
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+
+
+#header img {
+  padding-bottom: 20px;;
+}
+
+p.legal-copy {
+  padding:2rem 1rem 2rem 1rem;
+}
+.legal-copy{
+  text-align: left;
+  color:#646464;
+  margin-bottom:2rem;
+
+  font-size: 0.8rem;
+}
+
+footer {
+  width:100%;
+    padding:2rem 0 3rem 0;
+  background-color:#006FAC;
+}
+
+#logo-footer {
+  display: block;
+  text-align: center;
+  margin:0 auto;
+  position:relative;
+ padding-left:0px;
+}
+
+
+.form-holder {
+  display:block;
+  width:80%;
+  margin:0 auto;
+  background-color:#F4F4F4;
+  padding:1rem 1rem 2rem 1rem;
+}
+
+.form-holder h2 {
+  margin:2rem 0 1rem 0;
+}
+  /* FORM STYLES */
+  .container > * {
+  
+    padding:1rem;
+  }
+  
+  
+  .form-holder label {
+    display: block;
+    color:#333;
+    font-size:12px;
+    text-align: left;
+    padding-bottom:0.5rem;
+  }
+  
+  .form-holder form p {
+    margin:0;
+  }
+  
+  .form-holder form .full {
+    grid-column: 1 / 3;
+  }
+  
+  .form-holder form button {
+    width:100px;
+  }
+  
+  .form-holder form input[type="text"], .form-holder form input[type="email"] {
+    width:100%;
+    padding:0.5rem;
+    border:1px solid #c9e6ff;
+  }
+  
+  .form-holder button {
+    display:inline-block;
+    background:#ffffff;
+    color:#006FAC;
+    border:solid 1px #006FAC;
+    text-align: center;
+    margin:1rem auto;
+    padding:4px 12px;
+    font-size:1rem;
+    font-weight: 600;
+  }
+  
+  .form-holder button:hover, .form-holder button:focus {
+    background:#92bde7;
+    color:#ffffff;
+    transition: background-color 1s ease-out;
+  }
+
+  .subhead-with-graphic-grid img {
+    grid-template-columns: 1/2;
+    justify-self: flex-end;
+    align-self: center;;
+  }
+  
+  .subhead-with-graphic-grid h2,.subhead-with-graphic-grid p {
+    grid-template-columns: 2/4;
+    justify-self: flex-start;
+    text-align:center;
+    padding-left: 20px;
+  }
+  
+  #location-1 {
+    grid-column: 1/3;
+    grid-row: 1;
+    align-self:flex-start;
+
+  }
+  
+  #location-2 {
+    grid-column: 3/4;
+    grid-row: 1;
+  
+  }
+  
+  #location-3 {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+  
+  #location-4 {
+    grid-column: 3/4;
+    grid-row: 2;
+  
+  }
+
+  #form-view {
+    display:block;
+    padding:0 1rem 2rem 1rem;
+    vertical-align: top;
+  }
+
+  #form-view h2 {
+    margin:1rem 0 1.5rem 0;
+  }
+  
+  #ty-view {
+    display:none;
+  }
+  
+  hr {
+    border-bottom: 0;
+    border-left:0;
+    border-right:0;
+    border-top: 1px solid #d7d7d7;
+    width:90%;
+  }
+  
+  .location-headline {
+    text-align: left;
+    color:#006FAC;
+    font-size:14px;
+    font-weight:600;
+    padding-bottom:4px;
+    padding-top:0;
+  }
+  
+  .location-headline-end {
+    text-align: left;
+    color:#006FAC;
+    font-size:14px;
+    font-weight:600;
+    padding-bottom:4px;
+    padding-top:0;
+  }
+  
+  #end-card {
+    display:grid;
+    text-align: center;
+    margin:0 auto;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  #end-card .card {
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .location-copy {
+    text-align:left;
+    color:#666666;
+    font-size:12px;
+    font-weight:400;
+    padding-top:0;
+  }
+  .location-copy-end {
+    text-align:left;
+    color:#666666;
+    font-size:12px;
+    font-weight:400;
+    padding-top:0;
+  }
+  
+  .icon {
+    background:#006FAC;
+    border-radius:5px;
+    position: relative;
+    top:4px;
+    width:42px;
+    height:42px;
+    justify-self: flex-start;
+   
+  }
+
+  .icon img {
+    width:38px;
+    height:38px;
+    padding:3px 0 0 0;
+    margin:0 auto;
+  }
+  
+  .light-blue {
+    background:#eef5f9;
+  
+  }
+  
+  .card {
+    display:block;
+  }
+  
+  .card-grid {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    margin:1rem 0rem 2rem 2rem;
+  }
+  
+  
+  .end-card-grid {
+    display:grid;
+    /* grid-template-columns: 3fr; */
+    margin:1rem 0.5rem 2rem 1rem;
+  }
+  
+  .checkbox {
+   position: relative;
+   width:30px;
+   align-self: start;
+   top:12px;
+  
+  }
+  
+  .form-holder form input[type="checkbox"] {
+    align-self: start;
+  }
+  
+  .single-line {
+    grid-column: 1/3;
+    text-align: left;
+  }
+  
+  .checkbox-label {
+    text-align: left;
+    padding:0;
+    font-size:0.8rem;
+    color:#666666;
+  
+  }
+
+  .small-text {
+    font-size:0.9rem;
+  }
+  
+  .text-link {
+    font-weight: 300;;
+    color:#006FAC;
+    text-decoration: none;
+  }
+  
+  a.btn {
+    display:inline-block;
+    background:#ffffff;
+    color:#006FAC;
+    border:solid 1px #006FAC;
+    text-align: center;
+    margin:1rem auto;
+    padding:2px 12px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a.btn:hover, a.btn:focus {
+    background:#92bde7;
+    color:#ffffff;
+    transition: background-color 1s ease-out;
+  }
+  
+  .card p {
+    padding:0;
+    margin:0;
+  }
+  
+  .link-address a{
+    display: inline-block;
+    text-align: right;
+    font-size:11px;
+    font-weight: 600;;
+    color:#006FAC;
+    text-decoration: none;
+    padding:0.5rem;
+  }
+  .link-address a:hover {
+    display: inline-block;
+    text-align: right;
+    font-size:11px;
+    font-weight: 600;;
+    color:#3499d0;
+    text-decoration: none;
+    padding:0.5rem;
+  }
+
+
+  .graphic-container{
+    background:url('https://s3-us-west-2.amazonaws.com/letsconnectca.com/imgs/frame-bg.png') repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:auto;
+    z-index: -1;
+    padding:2rem;
+    border:1px solid #999999;
+  }
+  
+  .graphic-container h2 {
+    margin:2rem 2rem;
+  }
+
+  .subhead-copy {
+    text-align:center;
+  }
+
+  .error {
+    border:#cc0000;
+  }
+
+  
+
+
+/* LARGE SCREENS*/
+@media(min-width:640px) {
+  
+  .container {
+    width:80%;
+    margin:0 auto;
+    max-width:1440px;
+  
+  }
+
+  .form-holder {
+    display:block;
+    width:90%;
+    margin:0 auto;
+    background-color:#F4F4F4;
+    padding:1rem;
+  }
+
+  
+  .grid-locations {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    /* justify-content: flex-start; */
+    /* align-content: flex-start;; */
+  }
+  
+  .form-holder form {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  
+  div.subhead-with-graphic-grid {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    padding:0;
+  }
+  
+  .graphic-container h2 {
+    margin:2rem 7rem;
+  }
+
+  #bg-header h1 {
+    padding:2rem 8rem 2rem 8rem;
+  } 
+
+  #bg-header p {
+    margin:0 2rem;
+    padding:0 8rem 2rem 8rem;
+  }
+  
+  p.legal-copy {
+    padding:2rem 0rem 2rem 0rem;
+  }
+
+  
+  #logo {
+    display: block;
+    text-align: left;
+    margin:0 0;
+    padding-left:30px;
+    padding-bottom:2rem;
+  }
+  
+  #logo-footer {
+    display: block;
+    text-align: left;
+    margin:0 0;
+    position:relative;
+   padding-left:30px;
+  }
+  
+  .subhead-copy {
+    text-align:left;
+  }
+
+  .subhead-with-graphic-grid h2,.subhead-with-graphic-grid p {
+    grid-template-columns: 2/4;
+    justify-self: flex-start;
+    text-align:left;
+    padding-left: 20px;
+  }
+
+  #bg-header {
+    margin:0 auto;
+    background:url('https://s3-us-west-2.amazonaws.com/letsconnectca.com/imgs/bg-header.png') repeat;
+    background-position: center;
+    background-size:cover;
+    width:100%;
+    z-index: -1;
+  }
+
+  .subhead-with-graphic-grid img {
+    grid-template-columns: 1/2;
+    justify-self: flex-end;
+    align-self: center;
+
+  }
+
+
+    .h2 {
+      margin:2rem 0 0 0;
+    }
+    
+
+    .end-card-line {
+      width:40%;
+    }
+
+  
+
+}
+
+
+
+/* MODAL */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgba(0,0,0, 0.4);
+}
+
+.modal-header h2 {
+  padding:15px;
+  margin:0;
+  font-size:1.3rem;
+  color:#fff;
+}
+
+.modal-header {
+  margin:0;
+  background: #006FAC;
+}
+
+.modal-content {
+  background-color:#f4f4f4;
+  margin:50% auto;
+  width:60%;
+  font-size:1rem;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:0.5s;
+}
+
+.closeBtn {
+  color:#fff;
+  float:right;
+  padding:0 15px;
+  font-size:2rem;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  text-decoration: none;
+  color:#000;
+  cursor: pointer
+}
+
+@keyframes modalopen {
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/* END MODAL */

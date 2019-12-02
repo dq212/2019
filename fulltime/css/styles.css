@@ -1,0 +1,72 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #444;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.centered {
+    text-align: center;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  background: #e6e6e6;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.white {
+    background: #ffffff;
+}
+
+
+a {
+  color: #f15a29;
+  text-decoration: none;
+}
+a:hover {
+  color: #444444;
+}
+/* a:visited {
+  color: #444444;
+} */
+
+.one-edge-shadow {
+	-webkit-box-shadow: 0 12px 6px -6px rgb(97, 94, 94);
+	   -moz-box-shadow: 0 12px 6px -6px rgb(97, 94, 94);
+	        box-shadow: 0 12px 6px -6px rgb(97, 94, 94);
+}
+
+p {
+    line-height: 24px;
+}
+
+#logo-header {
+    width:150px;
+    height: auto;;
+}

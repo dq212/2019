@@ -1,0 +1,232 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="shortcut icon" href="https://letsconnectca.com/imgs/favicon.png"> 
+      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.5/bluebird.core.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script> -->
+
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+      <title>Anthem Let's Connect</title>
+    </head>
+    <body>
+          <!-- <button id="modalBtn" class="button">CLICK HERE</button> -->
+          <div id="simpleModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                  <h2>Selection required.</h2>
+                </div>
+                  <div class="modal-body">
+                    <p id="modalBodyCopy"></p>
+                  </div>
+              </div>
+            </div>
+
+      <header id="header">
+      <img id="logo" src="./imgs/logo-header.png" alt="">
+    </header>
+    <div class="wrapper">
+      <!-- <h1>Anthem Let's Connect Events</h1> -->
+        
+        <div id="bg-header">
+            <h1 class="bg-heaedr-h1">Connect with us at the Anthem Blue Cross holiday party</h1>
+            <p>And discover smart ways Anthem Blue Cross is making health care connections easier, smarter and more affordable.</p>
+        </div>
+        
+  <!-- Container -->
+      <div class="container">
+
+        <div class="subhead-with-graphic-grid">
+          <img src="./imgs/alexa.png" alt="">
+          <div class="subhead-copy">
+          <h2 class="h2">RSVP and get a chance to win an Echo device.</h2>
+          <p class="small-text">Select the event you would like to attend and complete the form to register.</p>
+        </div>
+        </div>
+
+      <div id="locations-block" class="grid-locations">
+        <div id="location-1">
+            <hr>
+    <div class="card card-grid"><!-- START CARD-->
+    <input type="checkbox" class="checkbox" name="location" data-calID="1" value="Southern California (Javier’s, Newport Beach)" data-dt="Tuesday, Dec 3, 5:00 – 8:00 PM" data-link="https://www.javiers-cantina.com">
+    <!-- <div class="icon"> <img src="./imgs/icon-logo.png" alt=""></div> -->
+    <div class="location-holder">
+      <p class="location-headline">Southern California (Javier’s, Newport Beach)</p>
+      <p class="location-copy">Tuesday, Dec 3, 5:00 – 8:00 PM</p>
+      <p class="link-address"><a href="https://www.javiers-cantina.com" target="_blank">javiers-cantina.com</a></p>
+
+    </div>
+        </div>
+
+      </div>
+      <div id="location-2">
+          <hr>
+          <div class="card  card-grid"><!-- START CARD-->
+          
+        <input type="checkbox" class="checkbox" name="location" data-calID="2" value="Los Angeles (Redbird, Downtown LA)" data-dt="Thursday, December 5, 5:30 – 9:00 PM" data-link="https://redbird.la/">
+    <!-- <div class="icon"> <img src="./imgs/icon-logo.png" alt=""></div> -->
+    <div class="location-holder">
+      <p class="location-headline">Los Angeles (Redbird, Downtown LA)</p>
+      <p class="location-copy">Thursday, December 5, 5:30 – 9:00 PM</p>
+      <p class="link-address"><a href="https://redbird.la/" target="_blank">redbird.la</a></p>
+
+    </div>
+        </div>
+
+      </div>
+
+      <div id="location-3">
+          <hr>
+          <div class="card  card-grid"><!-- START CARD-->
+            <input type="checkbox" class="checkbox" name="location" data-calID="3" value="Northern California (Sens, San Francisco)" data-dt="Tuesday, Dec 10, 5:00 – 8:00 PM" data-link="https://www.sens-sf.com">
+  <!-- <div class="icon"> <img src="./imgs/icon-logo.png" alt=""></div> -->
+  <div class="location-holder">
+    <p class="location-headline">Northern California (Sens, San Francisco)</p>
+    <p class="location-copy">Tuesday, Dec 10, 5:00 – 8:00 PM</p>
+    <p class="link-address"><a href="https://www.sens-sf.com" target="_blank">sens-sf.com</a></p>
+  </div>
+      </div>
+
+    </div>
+
+    <div id="location-4">
+        <hr>
+        <div class="card  card-grid"><!-- START CARD-->
+          <input type="checkbox" class="checkbox" name="location" data-calID="4" value="San Diego (The Winery, La Jolla)" data-dt="Thursday, Dec 12, 5:00 – 8:00 PM" data-link="https://www.thewinerylajolla.com">
+  <!-- <div class="icon"> <img src="./imgs/icon-logo.png" alt=""></div> -->
+  <div class="location-holder">
+  <p class="location-headline">San Diego (The Winery, La Jolla)</p>
+  <p class="location-copy">Thursday, Dec 12, 5:00 – 8:00 PM</p>
+  <p class="link-address"><a href="https://www.thewinerylajolla.com" target="_blank">thewinerylajolla.com</a></p>
+
+  </div>
+    </div>
+
+  </div>
+
+      </div>
+
+      <div class="graphic-container">
+        <div id="ty-view"><!--Start Thank you view-->
+          <h2 id="ty-headline">Thank you.</h2>
+
+      <div class="form-holder">
+      <h2>See you at the party!<br/>Where you'll get a chance to win
+  an Echo device.</h2>
+  <hr class="end-card-line">
+  <div id="end-card">
+  <div class="card light-blue end-card-grid"><!-- START CARD-->
+    <!-- <div class="icon"> <img src="./imgs/icon-logo.png" alt=""></div> -->
+    <div class="location-holder">
+      <p id="end-card-headline" class="location-headline"></p>
+      <p id="end-card-copy" class="location-copy"></p>
+      <!-- <p class="end-link-address"></p> -->
+    </div>
+
+  </div><!--END CARD -->
+  </div>
+
+  <p class="full">
+      <a class="btn" id="add-to-calendar" >+Add to Caledar</a>
+    </p>
+
+    <!-- <p class="link-address"><a id="end-card-link" href="#" target="_blank">link address</a></p> -->
+      </div>
+
+  </div><!--End Form view-->
+        <div id="form-view"><!--Start Form view-->
+          <h2>Register today.</h2>
+
+      <div class="form-holder">
+      
+        <form id="contactForm">
+          <p>
+          <label>First name*</label>
+          <input type="text" name="firstName" id="firstName" required>
+          </p>
+          <p>
+              <label>Last name*</label>
+              <input type="text" name="lastName" id="lastName" required>
+            </p>
+            <p>
+          <label>Title*</label>
+          <input type="text" name="title" id="title" required>
+          </p>
+          <p>
+              <label>Brokerage name*</label>
+              <input type="text" name="brokerage" id="brokerage"  required>
+            </p>
+            <p>
+                <label>Phone*</label>
+                <input type="text" name="phone" id="phone" required>
+              </p>
+              <p>
+                  <label>Email*</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <!-- <div class="single-line">
+                    <input style="display:inline" type="checkbox" name="agree" id="agree">
+                    <label style="display:inline"for="">Yes, I agree to be contacted by <a class="text-link" href="#" target="_blank">Anthem</a>.</label>
+                </div> -->
+                <p class="full">
+                  <a class="btn" id="btn-register">Register</a>
+                  <!-- <a class="btn" id="btn-register">Register</a> -->
+                </p>
+              
+        </form>
+  </div>
+  </div><!--End Form view-->
+      </div> 
+          <p class="legal-copy">Anthem Blue Cross is the trade name of Blue Cross of California. Anthem Blue Cross and Anthem Blue Cross Life and Health Insurance Company are independent licensees of the Blue Cross Association. Anthem is a registered trademark of Anthem Insurance Companies, Inc.</p>
+    </div>
+
+
+
+    </div>
+    <!-- End Container -->
+  <footer>
+          <img id="logo-footer" src="./imgs/logo-footer.png" alt="">
+      </footer>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBL5W8i3tiZ4uJBMRCl6-goFtk973vCpAo",
+          authDomain: "anthemevent-7eb48.firebaseapp.com",
+          databaseURL: "https://anthemevent-7eb48.firebaseio.com",
+          projectId: "anthemevent-7eb48",
+          storageBucket: "anthemevent-7eb48.appspot.com",
+          messagingSenderId: "910255400281",
+          appId: "1:910255400281:web:d14182094739df5c215848",
+          measurementId: "G-NLPW7Z4E1F"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+            //  db.settings({timestampsInSnapshots:true});
+
+        firebase.analytics();
+      </script>
+      <!-- <script src="./js/main.js"></script> -->
+      
+      <script src="./build/main.bundle.js"></script>
+    </body>
+  </html>

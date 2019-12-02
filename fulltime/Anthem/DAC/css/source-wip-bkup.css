@@ -1,0 +1,589 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+/* blue = #005cb9;
+orange = #ec7700;
+yellow = #fed925;
+magenta = #7c1848;
+magent-light = #a5346f;
+light-blue = #f9fbfc;
+gray-outline = #e6eaec;
+gray-text = #646464; 
+light-gray = #f9fbfb */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background:#fff;
+    font-size:16px;
+    max-width:1100px;
+    text-align:center;
+    padding:0;
+    margin:0;
+  }
+  
+  p {
+    padding:0;
+    margin:0;
+    font-size:1rem;
+    padding:1rem;
+    color:#333;
+  }
+  
+  header, footer {
+    margin:0;
+    padding:0;
+  }
+  
+  a {
+    cursor: pointer;
+  }
+  
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:2.4rem;
+    font-weight:700;
+    padding:1rem 1rem 1rem 1rem;
+  }
+  
+  /* BUTTON */
+  
+  .btn {
+    display:inline-block;
+    text-transform: none;
+    margin:1.5rem 1rem 2rem 1rem;
+    padding:0.75rem 2rem;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  
+  .btn:hover {
+    background:none;
+  }
+  
+  .btn:active {
+    background:none;
+  }
+  
+  .btn:visited {
+    background:none;
+  }
+  
+   .btn-yellow{
+    border: solid 2px #fed925;
+    color:#fed925;
+    background:none;
+    height:auto;
+    box-shadow: none;
+  }
+  
+  .btn-card{
+    display:inline-block;
+    border: solid 2px #7c1848;
+    color:#7c1848;
+    margin:1.5rem 1rem 3rem 1rem;
+    background:none;
+    height:auto;
+    box-shadow: none;
+  }
+  
+  .btn-form-submit {
+    border: solid 2px #7c1848;
+    color:#fff;
+    background:#a5346f;
+    height:auto;
+    padding:0.4rem 2rem;
+    box-shadow: none;
+    display:block;
+    margin:0 auto;
+  }
+  
+  .icon {
+    width:100px;
+    height:100px;
+    margin:0 auto;
+  }
+  
+  #showcase {
+    background:#005cb9;
+    padding:1.5rem 0.6rem;
+    margin:0;
+  }
+  
+  #showcase h1, #showcase p {
+    color:#ffffff;
+    margin:0;
+  }
+  
+  #main h2 {
+    color:#005cb9;
+    font-size:2.2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin:1rem;
+  }
+  
+  #main p {
+    color:#000;
+    line-height: 1.75rem;
+    font-weight: 300;
+    padding:0.8rem;
+  }
+  
+  /* CARD */
+  
+  .card-content {
+    padding:1.5rem 1rem 2rem 1rem;
+  }
+  
+  .card hr {
+    width:30%;
+    margin:0 auto;
+  }
+  
+  .card-title-blue {
+    color:#005cb9;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  h4.card-title-blue {
+    margin:1rem;
+  }
+  
+  .card-content {
+  background:#f9fbfb;
+  box-shadow: none;
+  border: #e6eaec 1px solid;
+  padding-bottom: 1rem;
+  }
+  
+  
+  
+  
+  /* LEGAL */
+  
+  #footer-legal {
+    background:#fff;
+    margin:0.75rem 0.5rem 2rem 0.5rem;
+  }
+  
+  .legal {
+    padding:1rem 0.25rem;
+    font-size:0.8rem;
+    text-align: left;
+    color:#646464;
+  }
+  
+  #footer-legal p {
+    padding:1rem 0.5rem;
+    font-size:0.8rem;
+    text-align: left;
+    color:#646464;
+  }
+  
+  /* PHONE  */
+  
+  #phone-holder {
+    display:inline-block;
+    color:#646464;
+    text-align: right;
+    padding:0.5rem;
+    line-height: 1.5rem;
+  }
+  
+  #phone-holder p {
+    font-size:0.8rem;
+    padding:0.25rem;
+    color:#646464;
+    line-height: 1.2rem;
+  }
+  
+  .phone {
+    color:#ec7700;
+    font-size:1.2rem;
+    font-weight: 600;
+  }
+  
+  a.phone-link{
+    text-decoration: none;
+  }
+  
+  /* unvisited link */
+  a.phone-link:link {
+    cursor: pointer;
+    color: #ec7700;
+  }
+  
+  /* visited link */
+  a.phone-link:visited {
+    color:#ec7700;
+  }
+  
+  /* mouse over link */
+  a.phone-link:hover {
+    color: #7c1848;
+  }
+  
+  /* selected link */
+  a.phone-link:active {
+    color: #ec7700;
+  }
+  
+  .header-grid {
+    display:grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  .footer-grid {
+    display:grid;
+    grid-template-columns: 50% 10% 40%;
+  }
+  
+  #logo-footer {
+    background:#005cb9;
+    padding:0 0 2rem 0;
+  }
+  
+  .logo {
+    display: block;
+    padding:1rem 0 0.5rem 0.5rem;
+    width:80%;
+  }
+  
+  .logo-footer {
+    display: block;
+    padding:1rem 0 0.5rem 0.5rem;
+    width:60%;
+  }
+  
+  .thin {
+  font-weight:300;
+  }
+  
+  #phone-holder-footer {
+    display:inline-block;
+    color:#fff;
+    text-align: right;
+    padding:0.5rem;
+    /* line-height: 1.5rem; */
+    grid-column: 3/4;
+  }
+  
+  #phone-holder-footer p {
+    font-size:0.8rem;
+    padding:0.25rem;
+    color:#fff;
+    line-height: 1.2rem;
+  }
+  
+  .phone-footer {
+    color:#fff;
+    font-size:0.9rem;
+    font-weight: 600;
+  }
+  
+  a.phone-link-footer{
+    text-decoration: none;
+  }
+  
+  /* unvisited link */
+  a.phone-link-footer:link {
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* visited link */
+  a.phone-link-footer:visited {
+    color:#fff;
+  }
+  
+  /* mouse over link */
+  a.phone-link-footer:hover {
+    color: #7c1848;
+  }
+  
+  /* selected link */
+  a.phone-link-footer:active {
+    color: #fff;
+  }
+  
+  
+  /* FORM  */
+  
+  #form-holder h2 {
+    color:#005cb9;
+    font-size:2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin:1rem 1rem 0.5rem 1rem;
+  }
+  
+  form {
+    text-align: left;
+    margin:1rem;
+  }
+  
+  #contact-form h6 {
+    text-align: left;
+    display:block;
+    padding:0 0.5rem;
+     margin:0.5rem 0;
+    font-weight: 400;
+  }
+  
+  #contact-form h6:nth-child(2) {
+    text-align: left;
+    display:block;
+    font-weight: 400;
+  }
+  
+  .form-control {
+    width:70%;
+    display: inline-block;
+    border: #222 solid 1px;
+    border-radius: 4px;
+  }
+  
+  select {
+    width:25%;
+    border:1px #222 solid 1px;
+    border-radius: 4px;
+  }
+  
+  input[type="text"] {
+    background: #fff;
+    text-align: left;
+    padding:0.5rem;
+    margin-left:0.5rem;
+  }
+  
+  input[type="email"], input[type="phone"] {
+    background: #fff;
+    text-align: left;
+    padding:0.5rem;
+    margin-left:0.5rem;
+  }
+  
+  select {
+    padding:0.5rem;
+    margin-left:0.5rem;
+  }
+  
+  label {
+    display:block;
+    margin:1rem 0.5rem 0.5rem 0.5rem;
+  }
+  
+  input[type="checkbox"] {
+    width:20px;
+    margin-left:0 !important;
+    display:inline-block;
+    margin:1rem 0rem 0.5rem 0.5rem;
+  }
+  
+  #checkbox-holder {
+    display:block;
+    margin:0.5rem;
+  }
+  
+   .agree-terms {
+     width:90%;
+     font-size:0.8rem;
+     vertical-align:3px;
+    /* background:#ff1199; */
+    /* display:inline-block; */
+  }
+  
+  #card-holder {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+  }
+  
+  .bolded {
+    font-weight: 700;
+  }
+  
+  
+  
+  @media(min-width: 768px) {
+  
+    body {
+      max-width:1100px;
+      margin:0 auto;
+    }
+  
+    .form-grid {
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(8, 0.5fr);
+    }
+  
+    .cards-grid {
+      display:grid;
+      grid-template-columns: 5% 40% 30px 40% 5%;
+      grid-template-rows: 1fr 50px 1fr;
+      justify-content: center;
+    }
+  
+    .card-grid {
+      display:grid;;
+      grid-template-rows: 5fr 1fr;
+      /* this is what helped me with the buttons */
+    }
+  
+    #card-holder {
+      margin:1rem 0;
+      height: 100%;
+      margin:0 auto 3rem auto;
+    }
+  
+    .card-content {
+      
+    }
+    
+    #card-1 {
+      grid-row:1;
+      grid-column: 2/3;
+    
+    }
+  
+    #card-2 {
+      grid-row:1;
+      grid-column: 4/5;
+  
+    }
+    #card-3 {
+      grid-row:3;
+      grid-column: 2/3;
+  
+    }
+    #card-4 {
+      grid-row:3;
+      grid-column: 4/5;
+    }
+   
+  
+    .btn-card {
+      display:block;
+      width:60%;
+      margin:1rem auto;
+      justify-self: center;
+  
+    }
+  
+    .logo {
+      display: block;
+      padding:1rem 0 0.5rem 0.5rem;
+      width:20%;
+    }
+  
+    .logo-footer {
+      display: block;
+      padding:1rem 0 0.5rem 0.5rem;
+      width:20%;
+    }
+    
+    #showcase h1 {
+        width:60%;
+        font-size:3rem;
+        margin:0 auto;
+        padding:0.25rem;
+    }
+  
+    .btn {
+      margin:1.5rem 1rem 0.5rem 1rem;
+    }
+  
+    #main h2 {
+      font-size:1.6rem;
+      margin-bottom:0rem;
+   
+    }
+  
+  
+  
+    #form-holder h2 {
+      font-size:1.6rem;
+      margin-bottom:0rem;
+    }
+  
+    #requiredField {
+      grid-row:1;
+      grid-column:2/5;
+    }
+  
+    #firstName {
+      grid-row:2;
+      grid-column:2/6;
+    }
+  
+    #lastName {
+      grid-row:2;
+      grid-column:7/12;
+    }
+  
+    #phoneNumber {
+      grid-row:3;
+      grid-column:2/6;
+    }
+  
+    #emailAddress {
+      grid-row:3;
+      grid-column:7/12;
+    }
+  
+    #streetAddress {
+      grid-row:4;
+      grid-column:2/8;
+    }
+  
+    #city {
+      grid-row:5;
+      grid-column:2/6;
+    }
+  
+    #state {
+      grid-row:5;
+      grid-column:6/8;
+    }
+  
+    #zip {
+      grid-row:5;
+      grid-column:8/10;
+    }
+  
+    #checkbox-holder {
+      grid-row:6;
+      grid-column:2/8;
+    }
+  
+    #btn-submit {
+      grid-row:7;
+      grid-column: 1/13;
+      justify-self:center;
+    }
+  
+    .form-control {
+      width:90%;
+      display: inline-block;
+      border: #222 solid 1px;
+      border-radius: 4px;
+    }
+  
+  
+  .agree-terms {
+    vertical-align:0;
+  }
+  
+  .small-footer-copy {
+    font-size: 0.8rem;
+  }
+  
+  
+  }
