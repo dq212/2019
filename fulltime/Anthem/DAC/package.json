@@ -1,0 +1,33 @@
+{
+  "name": "dac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "lint": "eslint src/js",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
+    "imagemin": "imagemin src/imgs/* --out-dir=dist/imgs -p"
+
+  
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.7.2",
+    "imagemin-cli": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "onchange": "^6.1.0",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^6.1.3",
+    "uglify-js": "^3.7.1"
+  }
+}
+
+
+
