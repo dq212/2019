@@ -1,0 +1,13 @@
+{
+  "generator-banner": {
+    "nameSpace": "TIAA",
+    "publisher": "doubleclick",
+    "bannerName": "DIS Consolidation Display ValueProp Bees_605979a_300x600 HTML",
+    "width": "300",
+    "height": "600",
+    "size": "150",
+    "includeFallbackIE": true,
+    "fallbackIEVersion": 9,
+    "doubleclickPlatform": "campaignManager"
+  }
+}

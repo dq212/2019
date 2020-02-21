@@ -1,0 +1,222 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/utilities/sprites";
+
+// set up variables
+$width: 300px;
+$height: 600px;
+
+// Uncomment to include sprites in your banner
+// $sprites: sprite-map("sprites/*.png");
+
+// to use sprites, place the image in the sprites folder and set the background for the desired element as follows:
+// .element { background: sprite($sprites, image-name); }
+
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*, :before, :after {
+	@include box-sizing(border-box);
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: $width;
+	height: $height; 
+	overflow: hidden;
+}
+
+#bg {
+	@extend .abs-pos;
+	// background-color:#ffffff;
+	 background-color:#00C3FF;
+}
+
+#bg-color {
+	@extend .abs-pos;
+	background-color:#00C3FF;
+}
+
+#wrapper {
+	@extend .abs-pos;
+	position: relative;	
+	visibility: hidden; 
+
+	&.show {
+		visibility: visible;
+	}
+}
+
+#click_through {
+	@extend .abs-pos;
+	z-index: 999;
+	cursor: pointer;
+	background-color: rgba(255,255,255,0);
+	border: 1px solid #000000;
+}
+
+#logo {
+	@extend .abs-pos;
+	opacity:0;
+}
+
+#copy-1 {
+	@extend .abs-pos;
+	opacity: 0;
+}
+#copy-2 {
+	@extend .abs-pos;
+	opacity: 0;
+}
+#copy-3 {
+	@extend .abs-pos;
+	left:-300px;
+	opacity: 0;
+}
+
+#cta {
+	@extend .abs-pos;
+	opacity:0;
+}
+
+#code {
+	@extend .abs-pos;
+	opacity:0;
+}	
+
+#bg-img {
+	position: relative;
+	top:0px;
+	left:0px;
+}
+
+#img-mask {
+	@extend .abs-pos;
+	overflow: hidden;
+}
+
+#shape {
+	position: absolute;
+	top:20px;
+	left:30px;
+	height:209px;
+	width:220px;
+}
+
+.walls{fill:#FAB016;}
+
+#grass {
+	@extend .abs-pos;
+	height:200px;
+	left:-100px;
+	top:510px;
+	width:500px;
+	background-color:#48a642;
+	overflow: visible;
+}
+
+#house {
+	@extend .abs-pos;
+	overflow: visible;
+	top:-50px;
+	left:35px;
+}
+
+#moon {
+	@extend .abs-pos;	
+	left:35px;
+}
+
+#window-top {
+	@extend .abs-pos;	
+	left:-6px;
+}
+
+#window-bottom {
+	@extend .abs-pos;
+	left:-6px;
+}
+
+.window-upstairs{fill:#FFFFFF;}
+.window-downstairs{fill:#FFFFFF;}
+
+#window-panes {
+	@extend .abs-pos;
+	left:-6px;
+}
+
+#outline-holder {
+	@extend .abs-pos;
+}
+
+#outline{
+	@extend .abs-pos;
+}
+
+#frame {
+	position: absolute;
+	top: 0px;
+	left: 8px;
+	width: 300px;
+	height: 650px; 
+	overflow: visible;
+}
+
+#bushes {
+	position: absolute;
+	top: 00px;
+	left: -25px;
+	width: 360px;
+	height: 650px; 
+	overflow: visible;
+}
+
+#doorknob {
+	@extend .abs-pos;
+	left:-4px;
+}
+
+#brick-house {
+	@extend .abs-pos;
+}
+
+#s1 {
+	@extend .abs-pos;
+}
+
+#s2{
+	@extend .abs-pos;
+	top:20px;
+}
+
+#s3 {
+	@extend .abs-pos;
+	top:40px;
+}
+
+#sky {
+	@extend .abs-pos;
+	top:-100px;
+	width:700px;
+	left:-100px;
+	height:800px;
+	overflow: visible;
+	background-color:#00C3FF;
+}
+
+#sky-holder {
+	@extend .abs-pos;
+	width:400px;
+	left:-25px;
+	overflow: visible;
+}
+
+#svg1 {
+	// top:-3px;
+}
+
+#svg2 {
+	top:-3px;
+} 

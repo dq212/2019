@@ -1,0 +1,13 @@
+{
+  "generator-banner": {
+    "nameSpace": "TIAA",
+    "publisher": "doubleclick",
+    "bannerName": "LifeInsurance Fall2018 Display aplus_586318_300x600 HTML",
+    "width": "300",
+    "height": "600",
+    "size": "150",
+    "includeFallbackIE": true,
+    "fallbackIEVersion": 9,
+    "doubleclickPlatform": "campaignManager"
+  }
+}

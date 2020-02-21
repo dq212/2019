@@ -1,0 +1,13 @@
+{
+  "generator-banner": {
+    "nameSpace": "TIAA",
+    "publisher": "doubleclick",
+    "bannerName": "4119_TIAA_LifeInsurance_300x600",
+    "width": "300",
+    "height": "600",
+    "size": "150",
+    "includeFallbackIE": true,
+    "fallbackIEVersion": 9,
+    "doubleclickPlatform": "campaignManager"
+  }
+}
