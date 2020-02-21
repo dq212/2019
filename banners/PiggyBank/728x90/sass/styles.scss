@@ -1,0 +1,124 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/utilities/sprites";
+
+// set up variables
+$width: 728px;
+$height: 90px;
+
+// Uncomment to include sprites in your banner
+// $sprites: sprite-map("sprites/*.png");
+
+// to use sprites, place the image in the sprites folder and set the background for the desired element as follows:
+// .element { background: sprite($sprites, image-name); }
+
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*, :before, :after {
+	@include box-sizing(border-box);
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: $width;
+	height: $height; 
+	overflow: hidden;
+}
+
+#bg {
+	@extend .abs-pos;
+	//background-color:#ffffff;
+	// background-color:#00C3FF;
+	 background-color: #2cb2a1;
+}
+
+#wrapper {
+	@extend .abs-pos;
+	position: relative;	
+	visibility: hidden; 
+
+	&.show {
+		visibility: visible;
+	}
+}
+
+#click_through {
+	@extend .abs-pos;
+	z-index: 999;
+	cursor: pointer;
+	background-color: rgba(255,255,255,0);
+	border: 1px solid #000000;
+}
+
+#logo {
+	@extend .abs-pos;
+}
+#copy-1 {
+	@extend .abs-pos;
+}
+#copy-2 {
+	@extend .abs-pos;
+}
+
+#copy-3 {
+	@extend .abs-pos;
+}
+
+#copy-4 {
+	@extend .abs-pos;
+}
+
+#copy-5{
+	@extend .abs-pos;
+}
+
+#cta {
+	@extend .abs-pos;
+}
+
+#icon {
+	@extend .abs-pos;
+}
+
+#code {
+	@extend .abs-pos;
+}	
+
+.coin {
+	position: absolute;
+	width:12px;
+	height:12px;
+}
+
+#coin-holder {
+	@extend .abs-pos;
+	overflow: hidden;	
+	top:60px;
+	left:370px;
+	//background-color: #ff199f;
+}
+
+#coin-holder2 {
+	@extend .abs-pos;
+	overflow: hidden;	
+	top:60px;
+	left:370px;
+    //background-color: #ff199f;
+}
+
+#pig {
+	@extend .abs-pos;
+	left: -30px;
+}
+
+
+#svg1 {
+	// top:-3px;
+}
+
+#svg2 {
+	top:-3px;
+} 
