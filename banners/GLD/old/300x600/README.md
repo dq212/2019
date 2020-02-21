@@ -1,1 +1,0 @@
-## CraftWW Atlas Banner Generator README
