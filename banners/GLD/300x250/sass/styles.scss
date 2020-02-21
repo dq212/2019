@@ -1,0 +1,145 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+
+/** set up variables **/
+$width: 300px;
+$height: 250px;
+$white: #FFFFFF;
+
+$whitetrans: rgba(255,255,255,0);
+$black: #000000;
+$blue: #0177d7;
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: georgia;
+  font-size: 24px; 
+  color: white;
+}
+
+#adBox {
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+  background-color: #d6b539; 
+  border: 1px solid #000;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#bgExit {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+
+
+
+  .copy {
+  font-family: georgia;
+  font-size: 24px;
+  color: #a98e2a;
+  white-space: nowrap;
+  display:inline-block;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%); 
+  }
+
+  #copy-white1, #copy-white2, #copy-white3 {
+  visibility: visible; }
+
+#copy-hidden1, #copy-hidden2, #copy-hidden3 {
+  position: absolute;
+  color: #fff;
+  opacity: 0; }
+
+#copy-hidden1 {
+  top: 32px;
+  left: 18px;
+}
+
+#copy-hidden2 {
+  top: 56px;
+  left: 18px;
+}
+
+#copy-hidden3 {
+  top: 82px;
+  left: 18px;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+#legal-holder {
+  position: absolute;
+  width:298px;
+  height:248px;
+  overflow:hidden;
+}
+
+#frame-legal {
+  position: absolute;
+  display: block;
+  -webkit-backface-visibility: hidden; 
+  cursor:pointer;
+}
+
+.hanging-comma {
+  color: #a98e2a;
+}
+
+#legal-link {
+  position:absolute;
+  width:270px;
+  height:16px;
+  display: none;
+  cursor: pointer;
+}
+
+#legal-link2 {
+  position:absolute;
+  width:36px;
+  height:16px;
+  display: none;
+  cursor: pointer;
+}
+
+  @media only screen and (max-device-width: 480px) {
+  .copy {
+    font-size: 18px;
+  }
+   #copy-hidden1 {
+    top: 32px;
+    left: 18px;
+  }
+
+  #copy-hidden2 {
+    top: 56px;
+    left: 18px;
+  }
+
+  #copy-hidden3 {
+    top: 82px;
+    left: 18px;
+  }
+}
+

@@ -1,0 +1,11 @@
+{
+  "generator-craft-banner": {
+    "bannerName": "StateStreet_GLD",
+    "width": "300",
+    "height": "250",
+    "size": "100",
+    "includeGreensock": true,
+    "includeFallbackIE": true,
+    "fallbackIEVersion": 9
+  }
+}
