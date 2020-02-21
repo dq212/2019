@@ -1,0 +1,159 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/utilities/sprites";
+// set up variables
+$width: 300px;
+$height: 250px;
+// Uncomment to include sprites in your banner
+// $sprites: sprite-map("sprites/*.png");
+// to use sprites, place the image in the sprites folder and set the background for the desired element as follows:
+// .element { background: sprite($sprites, image-name); }
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*,
+:before,
+:after {
+    @include box-sizing(border-box);
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: $width;
+    height: $height;
+    overflow: hidden;
+}
+
+#wrapper {
+    @extend .abs-pos;
+    position: relative;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+    }
+}
+
+#click_through {
+    @extend .abs-pos;
+    z-index: 900;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #000;
+}
+
+#legal {
+    @extend .abs-pos;
+    width: 100px;
+    height: 32px;
+    top: 213px;
+    left: 189px;
+    z-index: 900;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+   
+}
+
+
+#bg1 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/bg1.jpg") no-repeat;
+}
+
+#bg2 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/bg2.jpg") no-repeat;
+}
+
+#bg3 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/bg3.jpg") no-repeat;
+}
+
+#f1_copy {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/f1_copy.png") no-repeat;
+}
+
+#f2_copy {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/f2_copy.png") no-repeat;
+}
+
+#f3_copy {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/f3_copy.png") no-repeat;
+}
+
+#f4_copy1 {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/f4_copy1.png") no-repeat;
+}
+
+#product {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/product.jpg") no-repeat;
+}
+
+#disclaimer_box {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background: url("../img/disclaimer_box.png") no-repeat;
+}
+
+#cta {
+    position: absolute;
+    padding:0;
+    margin:0;
+    width:73px;
+    height: 25px;
+    top:66px;
+    left:15px;
+    background-color: #fff;  
+    overflow:hidden;
+}
+
+#learnmore, #learnmore1, #learnmore2{
+    position:relative;
+    top:0;
+    left:0;
+    padding:0;
+    margin:0;
+    cursor:pointer;
+}
